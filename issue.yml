@@ -1,0 +1,8 @@
+bug: Appium text log-filters miss passwords like MyP@ss1!
+
+why: Appium wraps text filters in \b word boundaries
+
+demo: Java main in src/main/java/com/mochxd/ShowBug.java
+
+author: Mohamed Mostafa
+github: Mochxd

@@ -1,0 +1,21 @@
+name: Show the bug
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  leak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Run Java demo
+        env:
+          APP_PASSWORD: 'MyP@ss1!'
+        run: mvn -q compile exec:java
