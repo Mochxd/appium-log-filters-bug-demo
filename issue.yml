@@ -1,8 +1,8 @@
-bug: Appium text log-filters miss passwords like MyP@ss1!
+bug: Appium --log-filters does not mask MyP@ss1! in server logs
 
-why: Appium wraps text filters in \b word boundaries
-
-demo: Java main in src/main/java/com/mochxd/ShowBug.java
+flow: >
+  Start Appium with a text filter for the password, open a Fake driver session
+  that includes appium:password, then read appium.log.
 
 author: Mohamed Mostafa
 github: Mochxd

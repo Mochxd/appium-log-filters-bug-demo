@@ -1,19 +1,19 @@
-# Appium log-filters bug (Java demo)
+# Appium log-filters bug
 
 Author: Mohamed Mostafa ([@Mochxd](https://github.com/Mochxd))
 
 ## What it does
 
-1. Takes password `MyP@ss1!`
-2. Builds the same `\b...\b` filter Appium uses for `--log-filters`
-3. Checks a fake Appium HTTP log line
+1. Starts real Appium with `--log-filters` for password `MyP@ss1!`
+2. Opens a Fake driver session that sends that password in capabilities
+3. Checks `appium.log`
 
-The password is still there → job fails.
+The password is still in the log → fail.
 
 ## Run
 
 ```bash
+npm install -g appium
+appium driver install fake
 mvn -q compile exec:java
-# or
-APP_PASSWORD='MyP@ss1!' mvn -q compile exec:java
 ```

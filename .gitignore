@@ -1,6 +1,8 @@
 target/
 log-filters.json
+appium.log
 .DS_Store
 *.log
 .idea/
 *.iml
+node_modules/
