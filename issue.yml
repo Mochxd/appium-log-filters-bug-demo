@@ -1,8 +1,3 @@
-bug: Appium --log-filters does not mask MyP@ss1! in server logs
-
-flow: >
-  Start Appium with a text filter for the password, open a Fake driver session
-  that includes appium:password, then read appium.log.
-
+bug: Appium --log-filters does not hide MyP@ss1! when opening a session
 author: Mohamed Mostafa
 github: Mochxd
